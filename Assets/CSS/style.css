@@ -1,0 +1,449 @@
+/* 
+Author: Karla Bustamante
+Date: 05/04/2024
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Century';
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    background-color: white;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 15rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 0.1rem 9%;
+}
+
+/* --------  Header and navigation bar -------   */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo img {
+    float: left;
+    width: 120px;
+    height: auto;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.0rem;
+    color: #666;
+}
+
+header .navbar a:hover{
+    color: #84C318;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    padding-top: 12%;
+    padding-bottom: 3%;
+}
+
+/* --------  Slider -------   */
+.slide-container {
+    position: relative;
+    left: 50px;
+    width: 1000px;
+    height: 450px;
+    border: 3px solid white;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+.slide-container .slides{
+    width: 100%;
+    height: calc(100% - 40px);
+    position: relative; 
+    overflow: hidden;
+}
+
+.slide-container .slides img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.slide-container .slides img:not(.active){
+    top: 0;
+    left: -100%;
+}
+
+/* --------  Slider buttons -------   */
+span.next, span.prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color: #eee;
+    opacity: 0.2;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+span.next{
+    right: 20px;
+}
+
+span.prev{
+    left: 20px;
+}
+span.next:hover, span.prev:hover{
+    background-color: #ede6d6;
+    opacity: 0.8;
+    color: #222;
+}
+
+/* --------  Slider dot buttons -------   */
+.dotsContainer{
+    position: absolute;
+    bottom: 5px;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dotsContainer .dot{
+    width: 15px;
+    height: 15px;
+    margin: 0px 2px;
+    border: 3px solid #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6 ease;
+}
+
+.dotsContainer .active{
+    background-color: #555;
+}
+
+/* --------  Slider animations -------   */
+@keyframes next1{
+    from{
+        left: 0%
+    }
+    to{
+        left: -100%;
+    }
+}
+
+@keyframes next2{
+    from{
+        left: 100%
+    }
+    to{
+        left: 0%;
+    }
+}
+
+@keyframes prev1{
+    from{
+        left: 0%
+    }
+    to{
+        left: 100%;
+    }
+}
+
+@keyframes prev2{
+    from{
+        left: -100%
+    }
+    to{
+        left: 0%;
+    }
+}
+
+/* --------  About section -------   */
+.heading{
+    text-align: left;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+.about .row .about-img{
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.about .row .about-img img{
+    width: 90%;
+    border: 1.5rem solid #E7CFBC;
+    border-radius: .5rem;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+    height: 90%;
+    object-fit: cover;
+}
+
+.about .row .about-img h3{
+    position:  absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    background: #E7CFBC;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}                                 
+
+.about .row .content{
+    flex: 1 1 40rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: #333;
+    padding-bottom: 5%;
+} 
+
+.about .row .content p{
+    font-size: 2rem;
+    color: #999;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+} 
+
+/* --------  Icons section -------   */
+.icons-container {
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons-container .icons {
+    background: #fff;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+
+.icons-container .icons img{
+    height: 7rem;
+    margin-right: 2rem;
+}
+
+.icons-container .icons a{
+    color: #84C318;
+    padding-bottom: .5rem;
+    font-size: 2rem;
+}
+
+/* --------  Products section -------   */
+.products .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.products .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    position: relative;
+}
+
+.products .titleh1{
+    padding-top: 10rem;
+}
+
+/* --------  Products images section -------   */
+.products .box-container .box .image{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.products .box-container .box .image img{
+    height: 25rem;
+}
+
+.products .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+
+/* --------  Products see more btn section -------   */
+.products .box-container .box .image .link-button{
+    position: absolute;
+    bottom: -7rem; left: 0; right: 0;
+    display: flex;
+}
+
+.products .box-container .box:hover .image .link-button{
+    bottom: 0;
+}
+
+.products .box-container .box .image .link-button a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 50%;
+    background: #84C318;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.products .box-container .box .image .link-button a:hover{
+    background: #699b13;
+}
+
+.products .box-container .box .image .link-button .more-btn{
+    border-left: .1rem solid #fff7;
+    border-right: .1rem solid #fff7;
+    width: 100%;
+}
+
+/* --------  Products titles section -------   */
+.products .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.products .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.products .box-container .box .content .price{
+    font-size: 2.5rem;
+    color: #84C318;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+
+/* --------  Contact form section-----   */
+.contact .row{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: .8rem;
+    align-items: center;
+}
+
+.contact .row form{
+    flex: 1 30rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .1);
+    background: #fff;
+    border-radius: .5rem;
+}
+
+.contact .row form .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #84C318;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contact .row form .btn:hover{
+    background: #699b13;
+}
+
+.contact .row .image{
+    flex: 0.7 18rem;
+}
+
+.contact .row .image img{
+    width: 100%;
+} 
+
+.contact .row form .box{
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    margin: .7rem 0; 
+    width: 100%;
+}
+
+.contact .row form .box:focus{
+    border-color: #84C318;
+}
+
+.contact .row form textarea{
+    height: 15rem;
+    resize:  none;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover{
+    color: #84C318;
+    text-decoration: underline;
+}

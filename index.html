@@ -1,0 +1,212 @@
+=<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    <!--
+        PROJECT 1 WEB DEVELOPMENT
+        Natural cosmetics website
+        Author: Karla Bustamante
+        Date:   05/04/2024
+
+    -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Naturally - Home</title>
+        <link rel="stylesheet" href="Assets/CSS/style.css">
+    </head>
+    <body>
+
+<!--    Header section         -->
+        <header>
+
+            <a href="#home" class="logo">         
+                <img src="Assets/img/logo.png">
+            </a>
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="haircare.html">Haircare</a>
+                <a href="skincare.html">Skincare</a>
+                <a href="makeup.html">Makeup</a>
+                <a href="#contact">Contact Us</a>
+            </nav>   
+
+        </header>
+<!--    Header section ends     -->
+
+ <!--    Home section starts     -->
+    <section class="home" id="home">
+
+        <div class="slide-container">
+            <div class="slides">
+                <img src="Assets/img/Slider1.png" class="active">
+                <img src="Assets/img/Slider2.png">
+                <img src="Assets/img/Slider3.png">
+            </div>
+
+            <div class="buttons">
+                <span class="next">&#10095;</span>
+                <span class="prev">&#10094;</span>
+            </div>
+
+            <div class="dotsContainer">
+                <div class="dot active" attr='0' onclick="switchImage(this)"></div>
+                <div class="dot" attr='1' onclick="switchImage(this)"></div>
+                <div class="dot" attr='2'onclick="switchImage(this)"></div>
+            </div>
+        </div>
+    </section>
+<!--    Home section ends     -->
+
+<!-------    About section starts     ------>
+    <section class="about" id="about">
+        <h1 class="heading">About us</h1>
+        <div class="row">
+            <div class="about-img">
+                <img src="Assets/img/aboutus-img.jpg">
+                <h3>Natural cosmetics</h3>
+            </div>
+
+            <div class="content">
+                <h3>What is Naturally?</h3>
+                <p>Discover pure beauty at Naturally, your destination for natural 
+                    and vegan skincare, haircare, and makeup. We curate a selection of 
+                    premium products that blend nature's finest with ethical practices, 
+                    so you can enhance your beauty while honoring the planet. Join us 
+                    in embracing guilt-free, radiant beauty today.</p>
+            </div>
+        </div>
+    </section>
+<!-------    About section ends    ------>
+
+<!-------    Icons section starts     ------>
+    <section class="icons-container">
+        <div class="icons">
+            <a href="skincare.html"><img src="Assets/img/skin-care.png"></a>
+            <div class="info">
+                <h3><a class="iconlink" href="skincare.html">Skincare</a></h3>
+            </div>
+        </div>
+        <div class="icons">
+            <a href="haircare.html"><img src="Assets/img/hair.png"></a>
+            <div class="info">
+                <h3><a class="iconlink" href="haircare.html">Haircare</a></h3>
+            </div>
+        </div>
+        <div class="icons">
+            <a href="makeup.html"><img src="Assets/img/makeup.png"></a>
+            <div class="info">
+                <h3><a class="iconlink" href="makeup.html">Makeup</a></h3>
+            </div>
+        </div>
+    </section>
+
+<!-------    Products section starts     ------>
+    <section class="products" id="products">
+        <h1 class="heading">Best Selling Products</h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="Assets/img/olaplex_hairtreatment.png" alt="">
+                    <div class="link-button">
+                        <a href="https://olaplex.com/products/olaplex-n-3-hair-perfector-us" target="_blank" class="more-btn">See more</a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>N&#186;.3 Hair Perfector&#8482;</h3>
+                    <div class="price"> $30</div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="Assets/img/acure_facialscrub.png" alt="">
+                    <div class="link-button">
+                        <a href="https://acure.com/collections/best-sellers/products/brightening-facial-scrub?gad_source=1&gclid=Cj0KCQjwudexBhDKARIsAI-GWYWNMmCVMqR4iVTdu361e58h36Hn4E89KU4shcOQ0KnKE_PZnziuxi4aAmUNEALw_wcB" target="_blank" class="more-btn">See more</a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Brightening Facial Scrub</h3>
+                    <div class="price"> $11.99</div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="Assets/img/aveda_handcreme.png" alt="">
+                    <div class="link-button">
+                        <a href="https://www.aveda.com/product/17759/16410/body/hand-care/hand-relief-moisturizing-creme?size=4.2_fl_oz%2F125_ml" target="_blank" class="more-btn">See more</a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>hand relief&#8482; Moisturizing Creme</h3>
+                    <div class="price"> $28</div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="Assets/img/pureology_shampoo_conditioner.png" alt="">
+                    <div class="link-button">
+                        <a href="https://www.pureology.com/perfect-pair/PPDPURHydrateDuo.html" target="_blank" class="more-btn">See more</a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Hidrate Shampoo and Conditioner Duo</h3>
+                    <div class="price"> $67</div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="Assets/img/elf_lipstain.png" alt="">
+                    <div class="link-button">
+                        <a href="https://www.elfcosmetics.com/glossy-lip-stain/300200.html" target="_blank" class="more-btn">See more</a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Glossy Lip Stain</h3>
+                    <div class="price"> $6</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-------    Contact section starts     ------>
+    <section class="contact" id="contact">
+        <h1 class="heading">Contact Us</h1>
+        <div class="row">
+            <form>
+                <input type="text" placeholder="name" class="box">
+                <input type="email" placeholder="email" class="box">
+                <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+
+            <div class="image">
+                <img src="Assets/img/contact_us.png" alt="contact us image">
+            </div>
+        </div>
+    </section>
+
+<!-------    Footer section starts     ------>
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Quick links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="haircare.html">Haircare</a>
+                <a href="skincare.html">Skincare</a>
+                <a href="makeup.html">Makeup</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+
+            <div class="box">
+                <h3>Contact Information</h3>
+                <a href="#">123-456-7890</a>
+                <a href="#">example@examplemail.com</a>
+                <a href="#">Chicago, Illinois - USA</a>
+            </div>
+
+        </div>
+    </section>
+    <script src="Assets/Scripts/slider.js" type="text/javascript"></script>
+    </body>
+</html>
